@@ -1,7 +1,3 @@
-fs = require('fs')
-myCode = fs.readFileSync('./js/1-1.js', 'utf-8') // depends on the file encoding
-eval(myCode);
-
 var input = `8eight1
 98126
 fourfourthreehnbhkmscqxdfksg64bvpppznkh
