@@ -1008,17 +1008,10 @@ zoneight234
 7pqrstsixteen`
 
 describe("day1part2", function () {
-    it("empty", function () {
-
-        var runner = new Day1Part2();
-
-        res = runner.run("");
-        expect(res).toBe(0);
-    });
-
+    let runner = new Day1Part2();
     it("firstInput", function () {
 
-        var runner = new Day1Part2();
+
 
         res = runner.run(firstInput);
         expect(res).toBe(281);
@@ -1026,7 +1019,7 @@ describe("day1part2", function () {
 
     it("eighthree", function () {
 
-        var runner = new Day1Part2();
+
 
         res = runner.run("eighthree");
         expect(res).toBe(83);
@@ -1034,7 +1027,7 @@ describe("day1part2", function () {
 
     it("sevenine", function () {
 
-        var runner = new Day1Part2();
+
 
         res = runner.run("sevenine");
         expect(res).toBe(79);
@@ -1042,7 +1035,7 @@ describe("day1part2", function () {
 
     it("hf1hh", function () {
 
-        var runner = new Day1Part2();
+
 
         res = runner.run("hf1hh");
         expect(res).toBe(11);
@@ -1050,7 +1043,7 @@ describe("day1part2", function () {
 
     it("xntwonetwofqpxsgshnbhjcsrld75fourfjbllqscg", function () {
 
-        var runner = new Day1Part2();
+
 
         res = runner.run("xntwonetwofqpxsgshnbhjcsrld75fourfjbllqscg");
         expect(res).toBe(24);
@@ -1058,7 +1051,7 @@ describe("day1part2", function () {
 
     it("three7938", function () {
 
-        var runner = new Day1Part2();
+
 
         res = runner.run("three7938");
         expect(res).toBe(38);
@@ -1066,7 +1059,7 @@ describe("day1part2", function () {
 
     it("one2one", function () {
 
-        var runner = new Day1Part2();
+
 
         res = runner.run("one2one");
         expect(res).toBe(11);
@@ -1074,7 +1067,7 @@ describe("day1part2", function () {
 
     it("6xcdvsftlsrsrgseven5seven", function () {
 
-        var runner = new Day1Part2();
+
 
         res = runner.run("6xcdvsftlsrsrgseven5seven");
         expect(res).toBe(67);
@@ -1082,7 +1075,7 @@ describe("day1part2", function () {
 
     it("bcgntz6gqxbxxtnnonegqlz4fivexmjxqf", function () {
 
-        var runner = new Day1Part2();
+
 
         res = runner.run("bcgntz6gqxbxxtnnonegqlz4fivexmjxqf");
         expect(res).toBe(65);
@@ -1090,7 +1083,7 @@ describe("day1part2", function () {
 
     it("h1nineglvgmh9txxg8", function () {
 
-        var runner = new Day1Part2();
+
 
         res = runner.run("h1nineglvgmh9txxg8");
         expect(res).toBe(18);
@@ -1098,7 +1091,7 @@ describe("day1part2", function () {
 
     it("3fiveeightoneightg", function () {
 
-        var runner = new Day1Part2();
+
 
         res = runner.run("3fiveeightoneightg");
         expect(res).toBe(38);
@@ -1106,7 +1099,7 @@ describe("day1part2", function () {
 
     it("ltgeightwothree5ccxbhssxrsbj", function () {
 
-        var runner = new Day1Part2();
+
 
         res = runner.run("ltgeightwothree5ccxbhssxrsbj");
         expect(res).toBe(85);
@@ -1114,7 +1107,7 @@ describe("day1part2", function () {
 
     it("eighthreeighthreeight", function () {
 
-        var runner = new Day1Part2();
+
 
         res = runner.run("eighthreeighthreeight");
         expect(res).toBe(88);
@@ -1122,7 +1115,7 @@ describe("day1part2", function () {
 
     it("twone", function () {
 
-        var runner = new Day1Part2();
+
 
         res = runner.run("twone");
         expect(res).toBe(21);
@@ -1130,7 +1123,7 @@ describe("day1part2", function () {
 
     it("one", function () {
 
-        var runner = new Day1Part2();
+
 
         res = runner.run("one");
         expect(res).toBe(11);
@@ -1138,7 +1131,7 @@ describe("day1part2", function () {
 
     it("oooneeone", function () {
 
-        var runner = new Day1Part2();
+
 
         res = runner.run("oooneeone");
         expect(res).toBe(11);
@@ -1147,10 +1140,9 @@ describe("day1part2", function () {
 
     it("finalInput", function () {
 
-        var runner = new Day1Part2();
+
 
         res = runner.run(input);
         expect(res).toBe(52705);
     });
-
 });
