@@ -106,14 +106,14 @@ Game 99: 9 blue, 12 red; 9 blue, 11 red, 13 green; 9 blue, 1 red, 13 green; 4 bl
 Game 100: 8 red, 3 green; 4 green, 1 blue, 15 red; 10 red, 8 green, 1 blue`
 
 describe("day2Part1", function () {
-    let runner = new Day2Part1();
+    let runner = new Day2Part2();
     it("firstInput", function () {
         res = runner.run(firstInput);
-        expect(res).toBe(8);
+        expect(res).toBe(2286);
     });
 
     it("input", function () {
         res = runner.run(input);
-        expect(res).toBe(2204);
+        expect(res).toBe(71036);
     });
 });

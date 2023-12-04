@@ -1,17 +1,61 @@
 class Day2Part1 {
-    regex = {
-        game: /^(.*?.:)/mg
-    }
 
     run(input) {
         var lines = input.split("\n");
-        var countPossible = 0;
+        let countPossible = 0;
+        var index = 0;
 
         lines.forEach(element => {
-            let gameRgx = this.regex.game.exec(element);
-            let gameNb = gameRgx[0].replace("Game ", "").replace(":", "")
+            let regexGame = /^(.*?.:.)/mg;
+            var gameNumber = regexGame.exec(element)[0];
+            gameNumber = gameNumber.replace("Game ", "").replace(":", "");
+            
+            element = element.replace(regexGame, "");
 
-            console.log(gameNb);
+            index++;
+
+            let sets = element.split("; ");
+
+            let setIndex = 0;
+            let setPossible = 0;
+            
+            sets.forEach(set => {
+                let regexGreen = /[0-9]+ green/g;
+                let regexRed = /[0-9]+ red/g;
+                let regexBlue = /[0-9]+ blue/g;
+
+                let nbGreen = 0;
+                let regexNbGreen = regexGreen.exec(set);
+                if(regexNbGreen != null){
+                    nbGreen = regexNbGreen[0].split(" green")[0];
+                }
+
+                let nbRed = 0;
+                let regexNbRed = regexRed.exec(set);
+                if(regexNbRed != null){
+                    nbRed = regexNbRed[0].split(" red")[0];
+                }
+
+                let nbBlue = 0;
+                let regexNbBlue = regexBlue.exec(set);
+                if(regexNbBlue != null){
+                    nbBlue = regexNbBlue[0].split(" blue")[0];
+                }
+
+                //12 red cubes, 13 green cubes, and 14 blue cubes?
+                if(parseInt(nbRed) <= 12 && parseInt(nbGreen) <= 13 && parseInt(nbBlue) <= 14){
+                    setPossible++;
+                }
+                setIndex++;
+            });
+
+            console.log("For Game "+ gameNumber + ", there was " + setIndex + " sets, out of all of them, " + setPossible + " were possible.")
+            if(setIndex === setPossible){
+                console.log(countPossible + "+" + parseInt(gameNumber));
+                countPossible = countPossible + parseInt(gameNumber);
+                console.log("= " + countPossible);
+            }
+            
 
         });
 
